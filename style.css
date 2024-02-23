@@ -62,7 +62,7 @@ nav h4 {
 #page1-content h1 span {
   display:inline-block; 
   font-family: "Kode Mono", monospace;
-  font-size: 20.7vw;
+  font-size: 24.7vw;
 
 }
 #cursor {
@@ -100,6 +100,27 @@ nav h4 {
   margin:0;
   padding:0;
 }
+@keyframes rotate-point {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.rotating-svg {
+  transform: rotate(0deg); /* Startet die Animation vom oberen Punkt des Kreises */
+}
+
+.rotating-point {
+  opacity: 1; /* Der Punkt hat volle Opazität */
+  transform-origin: 50% 50%; /* Setzt den Drehpunkt in die Mitte des SVG */
+  animation: rotate-point 10s linear infinite; /* Animiert den Punkt mit einer Dauer von 2 Sekunden unendlich */
+}
+
+
+
+
 #page2-content h2 {
     font-size: 1.4vw;
 

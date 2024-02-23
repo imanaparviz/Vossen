@@ -135,3 +135,48 @@ tl.from("#page1-content h1 span",{
   delay:-0.5
 
 })
+
+document.addEventListener('DOMContentLoaded', (event) => {
+// Funktion, die die Zählanimation ausführt
+function animateNumber(element, start, end, duration) {
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const nextNumber = Math.round(easeInOutQuad(timeElapsed, start, end - start, duration));
+
+    element.textContent = nextNumber;
+    
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    } else {
+      element.textContent = end; // Stellt sicher, dass die Animation beim Endwert anhält.
+    }
+  }
+  
+  function easeInOutQuad(t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// Intersection Observer, um zu erkennen, wann das SVG sichtbar wird
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Startet die Zählanimation
+      animateNumber(entry.target, 0, 28, 1000);
+      // Stoppt die Beobachtung nach dem Start der Animation
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+// Startet die Beobachtung des Textelements
+observer.observe(document.getElementById('animatedNumber'));
+});

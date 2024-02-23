@@ -84,17 +84,17 @@
     </div>
     <div id="page4">
       <video autoplay muted loop src="/assets/RJ-BALL-BLUE-ORANGE-scaled.webm"></video>
-      <svg class="abs tl:0 fit transform rotate:-90deg" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none"
-          class="o:0.3 $$2$$ $$3$$ $$4$$ (.in-view):tween:all,2.8s,easeOutSlow dasharray:308 dashoffset:616 (.in-view):dashoffset:554.4">
-        </circle>
-        <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none"
-          class="$$5$$ $$6$$ $$7$$ (.in-view):tween:all,2.8s,easeOutSlow dasharray:308 dashoffset:308 (.in-view):dashoffset:246.4">
-        </circle>
-        <svg class="abs tl:0 fit transform rotate:0 $$8$$ (.in-view):tween:all,2.8s,easeOutSlow (.in-view):rotate:72deg"
-          viewBox="0 0 100 100">
-          <circle cx="50" cy="1" r="1" fill="#fff"></circle>
-        </svg>
+      <svg class="rotating-svg" viewBox="0 0 100 100">
+        <!-- Unterer Kreis mit halber Opazität für den Hintergrund -->
+        <circle cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.25" fill="none" opacity="0.5"></circle>
+        
+        <!-- Viertelkreis mit voller Opazität -->
+        <circle class="rotating-point" cx="50" cy="50" r="49" stroke="#fff" stroke-width="0.5" fill="none" stroke-dasharray="80 955" stroke-dashoffset=""></circle>
+        
+        <!-- Animierter Punkt, der sich entlang des Kreises bewegt -->
+        <circle cx="99" cy="50" r="1" fill="#fff" class="rotating-point"></circle>
+        <text id="animatedNumber" x="50" y="50" text-anchor="middle" font-size="20" fill="black">0 <span>seats</span></text>
+
       </svg>
     </div>
     <div id="page5">
@@ -136,6 +136,25 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const element = document.getElementById('animatedNumber');
+      let startNumber = 0;
+      const endNumber = 28;
+      const duration = 1000; // Dauer in Millisekunden
+      const stepTime = duration / endNumber;
+    
+      function updateNumber() {
+        startNumber++;
+        element.textContent = startNumber;
+        if (startNumber < endNumber) {
+          setTimeout(updateNumber, stepTime);
+        }
+      }
+    
+      setTimeout(updateNumber, stepTime);
+    });
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
