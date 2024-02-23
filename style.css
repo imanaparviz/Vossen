@@ -56,10 +56,10 @@ nav h4 {
   font-weight: 100;
 }
 #page1-content h1 {
+  line-height:8.6vw;
   padding-bottom: 0.5vw;
-    line-height:8.6vw;
-  }
-  #page1-content h1 span {
+}
+#page1-content h1 span {
   display:inline-block; 
   font-family: "Kode Mono", monospace;
   font-size: 20.7vw;
