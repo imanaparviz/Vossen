@@ -180,3 +180,47 @@ const observer = new IntersectionObserver((entries, observer) => {
 // Startet die Beobachtung des Textelements
 observer.observe(document.getElementById('animatedNumber'));
 });
+
+function page6Animation(){
+  gsap.from(".elem6",{
+      y:120,
+      stagger:0.1,
+      duration:1,
+      scrollTrigger:{
+          trigger: "#page6",
+          scroller:"#main",
+          start:"top 40%",
+          end:"top 37%",
+/*             markers: true,
+*/            scrub:2,
+  }
+  })
+}
+page6Animation()
+
+
+function cursor4Effect(){
+  var page4 = document.querySelector("#page4-content");
+var cursor4 = document.querySelector("#cursor4");
+
+page4.addEventListener("mousemove", function (dets) {
+gsap.to(cursor4, {
+  x:dets.x,
+  y:dets.y,
+});
+});
+page4.addEventListener("mouseleave",function(){
+  gsap.to(cursor4,{
+      scale:0,
+      opacity:0,
+  })
+})
+page4.addEventListener("mouseenter",function(){
+  gsap.to(cursor4,{
+      scale:1,
+      opacity:1,
+
+  })
+})
+}
+cursor4Effect()
