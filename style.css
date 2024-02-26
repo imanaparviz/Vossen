@@ -10,6 +10,7 @@
 
 /* jadid */
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -277,10 +278,10 @@ height:100vw;
 #page5 {
   height: 100%;
   width: 100%;
-  position: relative;
   background-color: beige;
   padding: 4vw 0;
 }
+
 #page5 h1 {
   font-size: 8vw;
   font-family: Courier, monospace;
@@ -291,9 +292,8 @@ height:100vw;
   margin-left: 2%;
 }
 #swiperdiv {
-  position: relative;
   margin-top: -3%;
-  width: 100%;
+  width: 120%;
 }
 .swiper {
   width: 100%;
@@ -420,6 +420,7 @@ height:100vw;
 
 #page7-h1 {
   font-size:100%;
+  text-algine:center
 
   width:90vw;
   margin: 0;
@@ -427,7 +428,7 @@ height:100vw;
 #page7-h1 span {
   display: inline-block;
   font-family: "Kode Mono", monospace;
-  font-size: 22vw;
+  font-size: 20vw;
 }
 #iman-footer li {
   margin: 0;
@@ -436,7 +437,7 @@ height:100vw;
 #iman-footer {
   /* height:-1vw; */
   font-weight: bold;
-  right: 2vw;
+  right: 10%;
   position: absolute;
   word-spacing: -5px; /* Kann auch in em oder anderen Einheiten angegeben werden */
   color: #c7c5bd;
@@ -454,6 +455,7 @@ height:100vw;
   height: 100%;
 }
 #page7-div {
+  width:100%;
   text-align: center;
 }
 .footer {
@@ -534,7 +536,7 @@ height:100vw;
 
 .footer__nav {
   height: auto;
-  right: 10%;
+  right: 15%;
   position: absolute;
   display: flex;
   flex-flow: row wrap;
