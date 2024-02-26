@@ -8,10 +8,6 @@
 }
 /* jadid */
 
-
-
-
-
 /* jadid */
 * {
   margin: 0;
@@ -20,16 +16,17 @@
   font-family: Courier, monospace;
 }
 html,
-body { 
-   background-color: beige;
+body {
+  background-color: beige;
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 #page1 {
   height: 100%;
   width: 100%;
   background-color: #dadada;
   position: relative;
+  background-color: black;
 }
 #page1 video {
   height: 100%;
@@ -37,7 +34,9 @@ body {
   object-fit: cover;
   position: absolute;
 }
+
 #page1-content {
+  margin: 0 0.1vw;
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.221);
@@ -54,19 +53,40 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
-  padding: 2vw 3vw;
+  width: 100vw;
+  margin: 1vw;
 }
 nav h3 {
-  font-size: 1.4vw;
+  margin: 1vw 3vw;
+  font-size: 2vw;
 }
 nav h4 {
-  font-size: 1.4vw;
+  margin: 1vw 3vw;
+  font-size: 3vw;
   font-weight: 100;
 }
+@media screen and (max-width: 430px) {
+  #page1-content h3{
+    font-size: 2.5vw
+  }
+}
+@media screen and (max-width: 430px) {
+  #page1 video {
+width:100%;
+height:85vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  #page1-content  {
+width:100%;
+height:100vw;
+  }
+}
+
 #page1-content h1 {
-  line-height: 8.6vw;
-  padding-bottom: 0.5vw;
+  height: auto;
+  font-size: 0.5vw;
+  weight: 100%;
 }
 #page1-content h1 span {
   display: inline-block;
@@ -99,20 +119,20 @@ nav h4 {
 }
 
 #page2 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: beige;
   position: relative;
 }
 #page2-content {
-  height: 100vh;
+  height: 60vw;
   width: 100%;
   position: relative;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: 1vw;
   padding: 0;
 }
 @keyframes rotate-point {
@@ -136,7 +156,7 @@ nav h4 {
 }
 
 #page2-content h2 {
-  font-size: 1.4vw;
+  font-size: 2vw;
   color: black;
 }
 #page2-line {
@@ -150,12 +170,13 @@ nav h4 {
     rgba(0, 0, 0, 0) 100%
   );
 }
-/* .adam{
+/*  .adam{
   margin-bottom:1%;
-} */
+  font-size: 3.8vw;
+}  */
 #page2-text {
   justify-content: space-between;
-  width: 80vw;
+  width: 90%;
   margin-top: 3vw;
   margin-bottom: 1vw;
   display: flex;
@@ -163,20 +184,20 @@ nav h4 {
 }
 
 #page2-content p {
-  margin: 2vw 10vw;
-  font-size: 3.8vw;
+  margin: 1vw;
+  font-size: 4vw;
   font-weight: bold;
 }
 
 #page3 {
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   background-color: beige;
   padding: 3vw;
 }
 #page3-top {
-  /*     background-color:red;
- */
+  bottom: 0;
+  display: absolute;
   text-align: center;
 }
 #page3-top h4 {
@@ -196,10 +217,16 @@ nav h4 {
   border-radius: 10px;
 }
 .elem {
-  overflow: hidden;
+  display: flex; /* Macht das <p> Element zu einem Flex-Container */
+  flex-direction: column; /* Stapelt die Flex-Items (die <span> Elemente) vertikal */
+  align-items: center;
 }
+.elem-1 {
+  text-align: center; /* Zentriert den Text im .elem-1 <span> */
+}
+
 #page3-elements {
-  height: 75vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -209,12 +236,12 @@ nav h4 {
   margin-top: 8vw;
 }
 #page3-elements .box {
-  height: 100%;
+  height: 50vw;
   width: 32.5%;
   position: relative;
 }
 #page3-elements .box video {
-  height: 100%;
+  height: 50vw;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -231,8 +258,8 @@ nav h4 {
   opacity: 0;
 }
 #page4 {
-  margin-top:5%;
-  height: 100vh;
+  margin-top: 5%;
+  height: 50vw;
   position: relative;
   width: 100%;
   display: flex;
@@ -248,7 +275,7 @@ nav h4 {
   height: 60%;
 }
 #page5 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   background-color: beige;
@@ -264,15 +291,12 @@ nav h4 {
   margin-left: 2%;
 }
 #swiperdiv {
-  /*   margin-left:2%;
- */
   position: relative;
-  margin-top: -5%;
-  height: 60vh;
+  margin-top: -3%;
   width: 100%;
 }
 .swiper {
-  width: 130%;
+  width: 100%;
   height: 100%;
   justify-content: space-between;
 }
@@ -316,7 +340,7 @@ nav h4 {
 /*   page-6 */
 
 #page6-content {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   color: black;
@@ -334,13 +358,13 @@ nav h4 {
 }
 
 #page6-content h2 {
-  font-size: 1.4vw;
+  font-size: 2vw;
   color: black;
 }
 
 #page6 {
-  margin-top:0;
-  height: 60vh;
+  margin-top: 0;
+  height: 100%;
   width: 100%;
   background-color: beige;
   position: relative;
@@ -392,4 +416,207 @@ nav h4 {
   position: absolute;
   z-index: 10;
   color: #ffff;
+}
+
+#page7-h1 {
+  font-size:100%;
+
+  width:90vw;
+  margin: 0;
+}
+#page7-h1 span {
+  display: inline-block;
+  font-family: "Kode Mono", monospace;
+  font-size: 22vw;
+}
+#iman-footer li {
+  margin: 0;
+  height: 1.5vw;
+}
+#iman-footer {
+  /* height:-1vw; */
+  font-weight: bold;
+  right: 2vw;
+  position: absolute;
+  word-spacing: -5px; /* Kann auch in em oder anderen Einheiten angegeben werden */
+  color: #c7c5bd;
+  font-size: 1.1vw;
+  letter-spacing: 0px;
+}
+
+#page7 {
+  font-family: acumin-pro, system-ui, sans-serif;
+  margin: auto;
+  display: flex;
+  grid-template-rows: auto 1fr auto;
+  font-size: 14px;
+  align-items: start;
+  height: 100%;
+}
+#page7-div {
+  text-align: center;
+}
+.footer {
+  height: 100%;
+  position: relative; /* Ermöglicht die absolute Positionierung der inneren Box relativ zu diesem Container */
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: white;
+  background-color: black;
+}
+
+.footer > * {
+  flex: 1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-weight: 400;
+  font-size: 3vw;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3vw;
+  max-width: max-content;
+  border-radius: 1vw;
+  color: white;
+  border: 2px solid; /* Transparenter Rahmen */
+  line-height: 0;
+  margin-top: 2vw;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 2vw;
+  background-color: transparent; /* Hintergrundfarbe */
+  transition: background-color 0.9s, color 0.9s; /* Übergangseffekt */
+}
+.footer__btn:hover {
+  border-color: transparent; /* Macht den Rahmen beim Hover transparent */
+
+  color: #85847e; /* Textfarbe beim Hover */
+  background-color: lightgray; /* Hintergrundfarbe beim Hover */
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  height: auto;
+  right: 10%;
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.1vw;
+}
+.footer__nav ul {
+  margin-top: 0px;
+}
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul {
+  margin-top: 0px;
+  height: auto;
+}
+
+.nav__ul li {
+  height: 1.4vw;
+  margin: 0;
+}
+.nav__ul a {
+  word-spacing: -5px; /* Kann auch in em oder anderen Einheiten angegeben werden */
+  color: #c7c5bd;
+  padding: 0px 3vw;
+  margin: 0px;
+  font-size: ;
+  letter-spacing: 0px; /* Kann auch in em oder anderen Einheiten angegeben werden */
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  margin-top:3vw;
+  display:flex;
+  height: 100%;
+  font-size:1.2vw;
+}
+
+.legal__links {
+  display: flex;
+}
+.legal__links h3 {
+  margin: 0 1vw;
+  bottom: 1vw;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+
+  .footer__addr {
+    flex: 1 0px;
+  }
+
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+#page7-content {
+  margin: 0;
+  width: 100%;
+  heeight: 100%;
+  z-index: 10;
+  color: black;
 }
