@@ -290,7 +290,7 @@ height:100vw;
 }
 #swiperdiv {
   margin-top: -3%;
-  width: 120%;
+  width: 100%;
   display:absolute
 }
 .swiper {
@@ -313,7 +313,7 @@ height:100vw;
   margin: auto 1%;
   height: auto;
   width: auto;
-  max-width: 16%;
+  max-width: 15%;
   object-fit: cover;
 }
 
