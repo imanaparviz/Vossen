@@ -57,14 +57,14 @@ cursorEffect()
 
 function page2Animation(){
     gsap.from(".elem",{
-        y:120,
+        y:150,
         stagger:0.1,
         duration:1,
         scrollTrigger:{
             trigger: "#page2",
             scroller:"#main",
-            start:"top 40%",
-            end:"top 37%",
+            start:"top 90%",
+            end:"top 50%",
 /*             markers: true,
  */            scrub:2,
     }
@@ -75,14 +75,14 @@ page2Animation()
 
 function page3Animation(){
     gsap.from(".box",{
-        y:120,
+        y:220,
         stagger:0.1,
         duration:1,
         scrollTrigger:{
             trigger: "#page3",
             scroller:"#main",
-            start:"top 40%",
-            end:"top 37%",
+            start:"top 90%",
+            end:"top 80%",
 /*             markers: true,
  */            scrub:2,
     }
@@ -186,14 +186,32 @@ function page6Animation(){
       scrollTrigger:{
           trigger: "#page6",
           scroller:"#main",
-          start:"top 40%",
-          end:"top 37%",
+          start:"top 90%",
+          end:"top 80%",
 /*             markers: true,
 */            scrub:2,
   }
   })
 }
 page6Animation()
+
+
+function page7Animation(){
+  gsap.from("#page7-h1",{
+      y:120,
+      stagger:0.1,
+      duration:15,
+      scrollTrigger:{
+          trigger: "#page7-h1",
+          scroller:"#main",
+          start:"top 90%",
+          end:"top 80%",
+/*             markers: true,
+*/            scrub:2,
+  }
+  })
+}
+page7Animation()
 
 
 function cursor4Effect(){
