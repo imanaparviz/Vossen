@@ -205,12 +205,12 @@ page6Animation()
 
 
 function page7Animation(){
-  gsap.from("#page7-h1 span",{
+  gsap.from("#page7-div",{
       y:120,
       stagger:0.1,
       duration:1,
       scrollTrigger:{
-          trigger: "#page7",
+          trigger: "#page7-h1 span",
           scroller:"#main",
           start:"top 100%",
           end:"top 100%",
