@@ -429,10 +429,10 @@ margin-bottom:10vw;
 
 #page7-h1 {
   font-size:100%;
-  text-algine:center
-
+  text-algine:center;
   width:90vw;
   margin: 0;
+  display:inline;
 }
 #page7-h1 span {
   display: inline-block;

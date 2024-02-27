@@ -132,6 +132,14 @@ tl.from("#page1-content h1 span",{
   delay:-0.5
 
 })
+tl.from("#page7-h1",{
+  y:130,
+  opacity:0,
+  stagger:0.2,  
+  duration:0.5,
+  delay:-0.5
+
+})
 
 document.addEventListener('DOMContentLoaded', (event) => {
 // Funktion, die die Zählanimation ausführt
@@ -197,17 +205,16 @@ page6Animation()
 
 
 function page7Animation(){
-  gsap.from("#page7-h1",{
+  gsap.from("#page7-h1 span",{
       y:120,
       stagger:0.1,
-      duration:15,
+      duration:1,
       scrollTrigger:{
           trigger: "#page7-h1",
           scroller:"#main",
           start:"top 90%",
-          end:"top 80%",
-/*             markers: true,
-*/            scrub:2,
+          end:"top 90%",
+            scrub:2,
   }
   })
 }
