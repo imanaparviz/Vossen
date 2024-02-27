@@ -23,13 +23,14 @@ body {
   width: 100vw;
 }
 #page1 {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: #dadada;
   position: relative;
   background-color: black;
 }
 #page1 video {
+
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -38,7 +39,7 @@ body {
 
 #page1-content {
   margin: 0 0.1vw;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.221);
   position: relative;
@@ -74,13 +75,17 @@ nav h4 {
 @media screen and (max-width: 430px) {
   #page1 video {
 width:100%;
-height:85vw;
+height:100%;
   }
 }
 @media screen and (max-width: 430px) {
   #page1-content  {
 width:100%;
-height:100vw;
+height:75vh;
+margin-bottom:10vw;
+  }
+  #page6{
+    height:100vh;
   }
 }
 
@@ -289,14 +294,15 @@ height:100vw;
   margin-left: 2%;
 }
 #swiperdiv {
-  margin-top: -3%;
-  width: 100%;
-  display:absolute
+  margin-top: -4%;
+  algine-items: center;
+  padding-left:10%;
+  width:100%;
+
 }
 .swiper {
   width: 100%;
   height: 100%;
-  justify-content: space-between;
 }
 
 .swiper-slide {
@@ -309,7 +315,6 @@ height:100vw;
 }
 
 .swiper-slide img {
-  justify-content: space-between;
   margin: auto 1%;
   height: auto;
   width: auto;
