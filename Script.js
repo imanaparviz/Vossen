@@ -210,10 +210,10 @@ function page7Animation(){
       stagger:0.1,
       duration:1,
       scrollTrigger:{
-          trigger: "#page7-h1",
+          trigger: "#page7",
           scroller:"#main",
-          start:"top 90%",
-          end:"top 90%",
+          start:"top 100%",
+          end:"top 100%",
             scrub:2,
   }
   })
